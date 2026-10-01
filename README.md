@@ -11,3 +11,12 @@ Cute, feminine, professional IT portfolio with an agriculture/community-focused 
 
 ## GitHub Pages
 Upload the contents of this folder to the repository root and keep the asset paths intact.
+
+
+## V3 design note
+The visual language was intentionally separated from the other portfolios:
+- No green availability/status dot
+- No black headline + differently colored final word treatment
+- Hero uses a single-color editorial headline with an organic underline
+- Focus is presented as an agriculture × technology note
+- Section headings use restrained underline accents instead of split-color words
