@@ -31,3 +31,35 @@ if (window.matchMedia("(pointer:fine)").matches) {
     glow.style.transform = `translate3d(${e.clientX-r.left-110}px,${e.clientY-r.top-110}px,0)`;
   }, {passive:true});
 }
+
+/* V9: AgriConnect project gallery */
+(() => {
+  const main = document.getElementById("agriGalleryImage");
+  const mainFrame = document.querySelector(".gallery-main");
+  const count = document.getElementById("agriGalleryCount");
+  const title = document.getElementById("agriGalleryTitle");
+  const thumbs = [...document.querySelectorAll(".gallery-thumb")];
+  const prev = document.querySelector(".gallery-arrow.prev");
+  const next = document.querySelector(".gallery-arrow.next");
+  if (!main || !thumbs.length) return;
+
+  let index = 0;
+  function show(i){
+    index = (i + thumbs.length) % thumbs.length;
+    const t = thumbs[index];
+    main.src = t.dataset.src;
+    main.alt = t.dataset.title + " — AgriConnect";
+    title.textContent = t.dataset.title;
+    count.textContent = String(index + 1).padStart(2,"0") + " / " + String(thumbs.length).padStart(2,"0");
+    thumbs.forEach((x,n)=>x.classList.toggle("active",n===index));
+  }
+  thumbs.forEach((t,i)=>t.addEventListener("click",()=>show(i)));
+  prev?.addEventListener("click",()=>show(index-1));
+  next?.addEventListener("click",()=>show(index+1));
+  main.addEventListener("click",()=>mainFrame.classList.toggle("zoomed"));
+  document.addEventListener("keydown",e=>{
+    if(e.key==="Escape") mainFrame.classList.remove("zoomed");
+    if(e.key==="ArrowLeft") show(index-1);
+    if(e.key==="ArrowRight") show(index+1);
+  });
+})();

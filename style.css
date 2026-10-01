@@ -627,3 +627,123 @@ header{
   filter:blur(4px);
   transition:transform .18s ease-out;
 }
+
+/* V9 — AgriConnect screenshot gallery */
+.project-art.gallery{
+  padding:22px;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(201,111,152,.15),transparent 32%),
+    radial-gradient(circle at 85% 80%,rgba(216,198,229,.25),transparent 34%),
+    linear-gradient(145deg,#f2e2ef,#f8eef5);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:12px;
+}
+.gallery-main{
+  position:relative;
+  width:100%;
+  height:345px;
+  border-radius:20px;
+  overflow:hidden;
+  background:#2d2630;
+  border:1px solid rgba(201,111,152,.18);
+  box-shadow:0 16px 38px rgba(78,43,67,.12);
+}
+.gallery-main img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:contain;
+  background:#1f1b20;
+  cursor:zoom-in;
+}
+.gallery-arrow{
+  position:absolute;
+  top:50%;
+  translate:0 -50%;
+  width:40px;height:40px;
+  border:1px solid rgba(255,255,255,.55);
+  border-radius:50%;
+  background:rgba(44,32,48,.52);
+  color:#fff;
+  font-size:1.7rem;
+  line-height:1;
+  cursor:pointer;
+  backdrop-filter:blur(8px);
+  transition:.2s;
+}
+.gallery-arrow:hover{background:rgba(142,75,112,.88);transform:scale(1.05)}
+.gallery-arrow.prev{left:12px}.gallery-arrow.next{right:12px}
+.gallery-caption{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:0 3px;
+  color:var(--muted);
+  font-size:.72rem;
+}
+.gallery-caption span{
+  color:var(--rose);
+  font-weight:800;
+  letter-spacing:.12em;
+}
+.gallery-caption b{font-size:.78rem;color:var(--ink)}
+.gallery-thumbs{
+  display:flex;
+  gap:8px;
+}
+.gallery-thumb{
+  width:72px;height:50px;
+  padding:0;
+  border:2px solid transparent;
+  border-radius:9px;
+  overflow:hidden;
+  background:#fff;
+  cursor:pointer;
+  opacity:.72;
+  transition:.2s;
+}
+.gallery-thumb img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.gallery-thumb:hover,.gallery-thumb.active{
+  opacity:1;
+  border-color:var(--rose);
+}
+.gallery-main.zoomed{
+  position:fixed;
+  z-index:100;
+  inset:7vh 7vw;
+  width:auto;
+  height:auto;
+  max-height:86vh;
+  border-radius:18px;
+  box-shadow:0 30px 100px rgba(0,0,0,.35);
+}
+.gallery-main.zoomed img{
+  object-fit:contain;
+}
+.gallery-main.zoomed::after{
+  content:"Click image to close";
+  position:absolute;
+  left:50%;bottom:12px;
+  transform:translateX(-50%);
+  padding:5px 9px;
+  border-radius:999px;
+  background:rgba(0,0,0,.5);
+  color:#fff;
+  font-size:.68rem;
+  pointer-events:none;
+}
+@media(max-width:900px){
+  .project-art.gallery{min-height:340px}
+  .gallery-main{height:290px}
+}
+@media(max-width:560px){
+  .project-art.gallery{padding:14px}
+  .gallery-main{height:245px}
+  .gallery-thumb{width:64px;height:44px}
+  .gallery-main.zoomed{inset:10vh 3vw}
+}

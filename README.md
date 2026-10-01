@@ -51,3 +51,15 @@ Corrected the hero grid so the text stays on the left and the real portrait stay
 - Added a gentle portrait hover lift.
 - All effects remain decorative and sit behind the real interactive content.
 - Reduced-motion preferences are respected.
+
+
+## V9 AgriConnect gallery
+Added two supplied AgriConnect screenshots directly beside `index.html`:
+- `agriconnect-login.jpg`
+- `agriconnect-home.png`
+
+The project card now has an interactive screenshot gallery with thumbnails, previous/next controls, keyboard arrows, and click-to-zoom.
+
+
+## V10 — AgriConnect gallery expansion
+Added two additional AgriConnect screenshots: the dashboard overview and marketplace. The project gallery now supports four screenshots with thumbnails, navigation arrows, counter, zoom, and keyboard navigation.
