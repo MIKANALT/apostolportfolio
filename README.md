@@ -26,3 +26,9 @@ The visual language was intentionally separated from the other portfolios:
 - Added Arianne Mae E. Apostol's supplied 1x1 professional portrait at `assets/profile.jpg`.
 - Preserved the hero portrait placement and crop style.
 - Increased the visibility of the editorial underline beneath the hero headline.
+
+
+## V5 updates
+- `profile.jpg` now lives in the portfolio root; no `assets` folder is required for the profile image.
+- Added soft animated ambient gradients, floating organic shapes, dotted texture, rings, sparkles, and subtle motion while keeping the page calm and professional.
+- Other images can also be placed in the root and referenced directly by filename, e.g. `src="project1.png"`.
