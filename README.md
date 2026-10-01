@@ -20,3 +20,9 @@ The visual language was intentionally separated from the other portfolios:
 - Hero uses a single-color editorial headline with an organic underline
 - Focus is presented as an agriculture × technology note
 - Section headings use restrained underline accents instead of split-color words
+
+
+## V4 updates
+- Added Arianne Mae E. Apostol's supplied 1x1 professional portrait at `assets/profile.jpg`.
+- Preserved the hero portrait placement and crop style.
+- Increased the visibility of the editorial underline beneath the hero headline.
