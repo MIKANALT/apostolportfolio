@@ -32,3 +32,9 @@ The visual language was intentionally separated from the other portfolios:
 - `profile.jpg` now lives in the portfolio root; no `assets` folder is required for the profile image.
 - Added soft animated ambient gradients, floating organic shapes, dotted texture, rings, sparkles, and subtle motion while keeping the page calm and professional.
 - Other images can also be placed in the root and referenced directly by filename, e.g. `src="project1.png"`.
+
+
+## V6 reference-inspired design
+The new hero is implemented with HTML/CSS rather than using the reference image as a flat background.
+All navigation links, project/contact buttons, GitHub, and Download CV remain real interactive controls.
+The decorative botanical forms, rings, gradients, dots, and motion are layered behind the content.
