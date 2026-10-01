@@ -1,11 +1,13 @@
-# Arianne Mae E. Apostol — Portfolio
-Cute, feminine, professional static portfolio for Yanny Apostol.
+# Arianne Mae E. Apostol — Portfolio V2
+
+Cute, feminine, professional IT portfolio with an agriculture/community-focused identity.
 
 ## Replace later
-- Add her real portrait as `assets/profile.jpg`.
-- Replace `Arianne_Mae_Apostol_CV.pdf` with her actual CV PDF.
-- Add project screenshots and more projects when available.
-- Add education dates when confirmed.
+- `assets/profile.jpg` — add Yanny's real professional photo
+- `Arianne_Mae_Apostol_CV.pdf` — replace placeholder CV
+- Add project screenshots and additional projects
+- Add education dates when verified
+- Update social links if needed
 
 ## GitHub Pages
-Upload all files to the repository root and keep the `assets` folder intact.
+Upload the contents of this folder to the repository root and keep the asset paths intact.
