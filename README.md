@@ -63,3 +63,17 @@ The project card now has an interactive screenshot gallery with thumbnails, prev
 
 ## V10 — AgriConnect gallery expansion
 Added two additional AgriConnect screenshots: the dashboard overview and marketplace. The project gallery now supports four screenshots with thumbnails, navigation arrows, counter, zoom, and keyboard navigation.
+
+
+## V11 gallery fix
+The AgriConnect gallery was rebuilt to prevent the generic project-art styles from affecting its controls.
+- Thumbnails are now a single horizontal row.
+- Previous/next controls are clickable and layered above decorative elements.
+- Clicking the main screenshot opens a true fullscreen lightbox.
+- Lightbox has working previous/next/close controls.
+- Arrow keys and Escape work in the viewer.
+- Decorative project shapes no longer intercept clicks.
+
+
+## V12 JavaScript fix
+Fixed a JavaScript syntax error in the portfolio assistant string. The error prevented the entire script from loading, which disabled the AgriConnect gallery controls and other interactive behavior.
