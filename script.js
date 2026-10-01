@@ -18,3 +18,16 @@ if (window.matchMedia('(pointer:fine) and (prefers-reduced-motion:no-preference)
   };
   frame();
 }
+
+/* V8: restrained pointer glow for desktop, disabled on touch devices. */
+if (window.matchMedia("(pointer:fine)").matches) {
+  const hero = document.querySelector(".hero");
+  const glow = document.createElement("span");
+  glow.className = "cursor-glow";
+  hero?.appendChild(glow);
+  window.addEventListener("pointermove", (e) => {
+    if (!hero) return;
+    const r = hero.getBoundingClientRect();
+    glow.style.transform = `translate3d(${e.clientX-r.left-110}px,${e.clientY-r.top-110}px,0)`;
+  }, {passive:true});
+}

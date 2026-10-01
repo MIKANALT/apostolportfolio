@@ -42,3 +42,12 @@ The decorative botanical forms, rings, gradients, dots, and motion are layered b
 
 ## V7 layout fix
 Corrected the hero grid so the text stays on the left and the real portrait stays on the right on desktop. The decorative background layer is explicitly removed from the grid flow.
+
+
+## V8 visual polish
+- Added additional soft ambient orbs, orbit lines, tiny stars, and subtle motion.
+- Added a restrained desktop cursor glow.
+- Added a small animated scroll cue.
+- Added a gentle portrait hover lift.
+- All effects remain decorative and sit behind the real interactive content.
+- Reduced-motion preferences are respected.

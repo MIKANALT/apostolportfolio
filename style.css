@@ -496,3 +496,134 @@ header{
     order:-1;
   }
 }
+
+/* V8 — richer ambient motion, still intentionally soft and professional */
+.hero{
+  isolation:isolate;
+}
+.hero-decor{
+  z-index:0;
+}
+.ambient-orb{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(24px);
+  pointer-events:none;
+  mix-blend-mode:multiply;
+}
+.orb-1{
+  width:270px;height:270px;
+  left:31%;top:12%;
+  background:rgba(232,172,205,.15);
+  animation:orbDriftOne 13s ease-in-out infinite;
+}
+.orb-2{
+  width:330px;height:330px;
+  right:2%;bottom:-5%;
+  background:rgba(205,187,229,.19);
+  animation:orbDriftTwo 16s ease-in-out infinite;
+}
+.orbit{
+  position:absolute;
+  border:1px solid rgba(201,111,152,.14);
+  border-radius:50%;
+  pointer-events:none;
+}
+.orbit-a{
+  width:720px;height:250px;
+  right:-160px;top:24%;
+  transform:rotate(-12deg);
+  animation:orbitDrift 18s ease-in-out infinite alternate;
+}
+.orbit-b{
+  width:520px;height:180px;
+  left:-180px;bottom:10%;
+  border-color:rgba(216,198,229,.28);
+  transform:rotate(8deg);
+  animation:orbitDrift 22s ease-in-out infinite alternate-reverse;
+}
+.tiny-star{
+  position:absolute;
+  color:rgba(185,102,146,.34);
+  font-size:1rem;
+  pointer-events:none;
+  animation:starDrift 5s ease-in-out infinite;
+}
+.star-1{left:52%;top:23%;animation-delay:-1s}
+.star-2{left:58%;top:69%;font-size:1.5rem;animation-delay:-3s}
+.star-3{right:15%;top:42%;animation-delay:-2s}
+.portrait-frame{
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+.portrait-frame:hover{
+  transform:translateY(-5px) rotate(.25deg);
+  box-shadow:0 30px 80px rgba(103,58,87,.18),0 0 0 1px rgba(201,111,152,.30);
+}
+.portrait-halo{
+  background:
+    radial-gradient(circle at 50% 45%,rgba(224,195,228,.72),rgba(255,255,255,0) 62%),
+    radial-gradient(circle at 70% 65%,rgba(239,181,210,.20),transparent 55%);
+}
+.scroll-cue{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  margin-top:17px;
+  color:#8d7b89;
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  opacity:.75;
+}
+.scroll-cue span{
+  width:22px;height:34px;
+  border:1px solid rgba(142,75,112,.35);
+  border-radius:999px;
+  position:relative;
+}
+.scroll-cue span::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:7px;
+  width:4px;height:7px;
+  border-radius:999px;
+  background:var(--rose);
+  transform:translateX(-50%);
+  animation:scrollDot 1.8s ease-in-out infinite;
+}
+@keyframes orbDriftOne{
+  0%,100%{transform:translate3d(0,0,0) scale(1)}
+  50%{transform:translate3d(22px,18px,0) scale(1.08)}
+}
+@keyframes orbDriftTwo{
+  0%,100%{transform:translate3d(0,0,0) scale(1)}
+  50%{transform:translate3d(-28px,-20px,0) scale(1.1)}
+}
+@keyframes orbitDrift{
+  0%{translate:0 0;scale:1}
+  100%{translate:-18px 12px;scale:1.04}
+}
+@keyframes starDrift{
+  0%,100%{opacity:.25;transform:translateY(0) rotate(0)}
+  50%{opacity:.9;transform:translateY(-9px) rotate(12deg)}
+}
+@keyframes scrollDot{
+  0%{transform:translate(-50%,0);opacity:.35}
+  50%{transform:translate(-50%,8px);opacity:1}
+  100%{transform:translate(-50%,0);opacity:.35}
+}
+@media(prefers-reduced-motion:reduce){
+  .ambient-orb,.orbit,.tiny-star,.scroll-cue span::after,.portrait-frame{animation:none!important;transition:none!important}
+}
+
+.cursor-glow{
+  position:absolute;
+  z-index:1;
+  width:220px;height:220px;
+  border-radius:50%;
+  pointer-events:none;
+  background:radial-gradient(circle,rgba(225,169,203,.12),rgba(225,169,203,0) 68%);
+  filter:blur(4px);
+  transition:transform .18s ease-out;
+}
