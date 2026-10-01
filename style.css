@@ -460,3 +460,39 @@ header{
 @media(prefers-reduced-motion:reduce){
   .hero-decor *,.hero:before,.hero:after,.portrait-halo,.portrait-ring,.portrait-flower{animation:none!important}
 }
+
+/* V7 layout correction
+   Keep the decorative layer out of the hero grid and explicitly anchor
+   the text and portrait to their intended columns. */
+.hero{
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+}
+.hero > .hero-decor{
+  position:absolute;
+  inset:0;
+  z-index:0;
+}
+.hero > div:not(.hero-decor):first-of-type{
+  grid-column:1;
+  grid-row:1;
+}
+.hero > .portrait{
+  grid-column:2;
+  grid-row:1;
+}
+.hero > div:not(.hero-decor){
+  min-width:0;
+}
+@media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+  }
+  .hero > div:not(.hero-decor):first-of-type,
+  .hero > .portrait{
+    grid-column:1;
+    grid-row:auto;
+  }
+  .hero > .portrait{
+    order:-1;
+  }
+}

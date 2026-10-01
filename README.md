@@ -38,3 +38,7 @@ The visual language was intentionally separated from the other portfolios:
 The new hero is implemented with HTML/CSS rather than using the reference image as a flat background.
 All navigation links, project/contact buttons, GitHub, and Download CV remain real interactive controls.
 The decorative botanical forms, rings, gradients, dots, and motion are layered behind the content.
+
+
+## V7 layout fix
+Corrected the hero grid so the text stays on the left and the real portrait stays on the right on desktop. The decorative background layer is explicitly removed from the grid flow.
